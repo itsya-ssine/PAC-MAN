@@ -1,0 +1,31 @@
+[project]
+name = "pacman"
+version = "1.0.0"
+description = "Pac-Man recreated in Python (42 curriculum)"
+readme = "README.md"
+requires-python = ">=3.10"
+# Runtime dependencies that are NOT on PyPI are installed from wheels by
+# `make install` (see README): the 42 MLX wheel and the A-Maze-ing
+# package assigned by another group (put both in wheels/).
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "flake8",
+    "mypy",
+    "pytest",
+    "pyinstaller",
+]
+
+[tool.uv]
+# An application, not a distributable library: nothing to build/install.
+package = false
+default-groups = ["dev"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+exclude = '(^build/|^dist/|^venv/|^\.venv/|^wheels/)'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

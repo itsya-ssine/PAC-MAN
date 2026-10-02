@@ -1,0 +1,37 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# uv / virtual environments (keep uv.lock committed)
+.venv/
+venv/
+env/
+
+# Type checking, linting, tests
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Packaging / build output
+build/
+dist/
+*.egg-info/
+
+# Local wheels (MLX, assigned A-Maze-ing package)
+wheels/
+*.whl
+
+# Game runtime files
+highscores.json
+highscores.json.tmp
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
